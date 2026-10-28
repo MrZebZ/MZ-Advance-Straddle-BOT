@@ -126,15 +126,3 @@ Understanding these will save you surprises.
 6. **Server time.** The time filter uses broker server time and only affects when new straddles are armed, not trailing of open trades.
 7. **State is not saved across restarts.** The "re-arm off" flag resets if the EA is reloaded.
 8. **One chart per symbol.** Run one instance per symbol, with a unique magic number if you run several EAs.
-
-## Backtesting
-
-See the [backtesting guide](../../docs/BACKTESTING.md). Use **"Every tick based on real ticks"** for this EA, because pending-order fills and tight trailing stops are very sensitive to tick data quality.
-
-Add your own Strategy Tester screenshots here once you have run them:
-
-![Strategy Tester placeholder](images/results-placeholder.png)
-
-## Support
-
-Open an issue in this repository with your MT5 build number, broker, symbol, inputs used, and the relevant lines from the **Experts** tab.
