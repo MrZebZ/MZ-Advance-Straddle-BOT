@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" role="img" aria-label="OCO Straddle Trail EA decision flow per tick">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect width="1000" height="720" fill="#0b1220"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="30" y="38" font-size="24" font-weight="700" fill="#fff" text-anchor="start">Decision flow on every tick</text>
+
+    <rect x="380" y="60" width="240" height="44" rx="22" fill="#164e63" stroke="#22d3ee"/><text x="500" y="88" fill="#e0f2fe" font-weight="600">OnTick()</text>
+    <path d="M500 104V140" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <polygon points="500,140 620,185 500,230 380,185" fill="#1e293b" stroke="#fbbf24"/><text x="500" y="190" fill="#fde68a">Position open?</text>
+    <!-- yes branch -->
+    <path d="M620 185H760" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/><text x="690" y="176" fill="#34d399">Yes</text>
+    <rect x="760" y="150" width="200" height="70" rx="8" fill="#14532d" stroke="#34d399"/>
+    <text x="860" y="177" fill="#dcfce7" font-weight="600">Delete other pending</text>
+    <text x="860" y="199" fill="#bbf7d0">then TrailPosition()</text>
+    <!-- no branch -->
+    <path d="M500 230V270" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/><text x="520" y="255" fill="#f87171">No</text>
+
+    <polygon points="500,270 640,315 500,360 360,315" fill="#1e293b" stroke="#fbbf24"/><text x="500" y="312" fill="#fde68a">Pending orders</text><text x="500" y="330" fill="#fde68a">count?</text>
+    <path d="M640 315H760" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/><text x="700" y="306" fill="#cbd5e1">1</text>
+    <rect x="760" y="285" width="200" height="60" rx="8" fill="#7c2d12" stroke="#fb923c"/>
+    <text x="860" y="311" fill="#ffedd5" font-weight="600">Delete orphan order</text><text x="860" y="331" fill="#fed7aa">start cooldown</text>
+    <path d="M360 315H240" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/><text x="300" y="306" fill="#cbd5e1">2+</text>
+    <rect x="40" y="285" width="200" height="60" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="140" y="311" fill="#e2e8f0" font-weight="600">Wait for a fill</text><text x="140" y="331" fill="#94a3b8">(or expiry)</text>
+    <path d="M500 360V400" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/><text x="520" y="385" fill="#cbd5e1">0</text>
+
+    <rect x="260" y="400" width="480" height="190" rx="10" fill="#111827" stroke="#475569"/>
+    <text x="500" y="428" fill="#fff" font-weight="700">Arming checks (all must pass)</text>
+    <g fill="#cbd5e1" text-anchor="start">
+      <text x="290" y="455">1. Terminal and EA algo trading allowed</text>
+      <text x="290" y="477">2. Re-arm enabled (or first straddle)</text>
+      <text x="290" y="499">3. Cooldown elapsed</text>
+      <text x="290" y="521">4. Inside time window (if enabled)</text>
+      <text x="290" y="543">5. Spread within limit (if enabled)</text>
+      <text x="290" y="565">6. Daily loss and max-trades limits not hit</text>
+    </g>
+    <path d="M500 590V620" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="330" y="620" width="340" height="60" rx="10" fill="#4c1d95" stroke="#a78bfa"/>
+    <text x="500" y="647" fill="#ede9fe" font-weight="700">PlaceStraddle()</text>
+    <text x="500" y="667" fill="#ddd6fe">Buy + Sell pending with SL, TP, expiry</text>
+  </g>
+</svg>

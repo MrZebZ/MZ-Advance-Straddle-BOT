@@ -1,0 +1,32 @@
+# MetaTrader compiled files
+*.ex5
+*.ex4
+
+# Logs, tester output and caches
+*.log
+*.tst
+*.opt
+*.hcc
+*.hst
+Tester/
+logs/
+
+# Optimization / report output
+*.xml
+ReportTester*.html
+ReportTester*.png
+
+# Personal settings (may contain account details)
+*.set.private
+secrets.*
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp

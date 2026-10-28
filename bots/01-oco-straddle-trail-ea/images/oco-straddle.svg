@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="OCO straddle: Buy Stop above price, Sell Stop below price">
+  <rect width="900" height="460" fill="#0b1220"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="30" y="40" font-size="24" font-weight="700" fill="#fff">OCO Straddle (Breakout mode)</text>
+    <text x="30" y="64" font-size="14" fill="#9fb3c8">Two pending orders around price. The first one filled cancels the other.</text>
+    <!-- price line -->
+    <line x1="60" y1="230" x2="640" y2="230" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="650" y="235" font-size="15" fill="#e2e8f0" font-weight="600">Current price</text>
+    <!-- buy stop -->
+    <line x1="60" y1="130" x2="640" y2="130" stroke="#34d399" stroke-width="2.5" stroke-dasharray="10 6"/>
+    <text x="650" y="135" font-size="15" fill="#34d399" font-weight="600">Buy Stop</text>
+    <line x1="60" y1="170" x2="640" y2="170" stroke="#f87171" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <text x="650" y="175" font-size="13" fill="#f87171">Buy SL (initial)</text>
+    <!-- sell stop -->
+    <line x1="60" y1="330" x2="640" y2="330" stroke="#f87171" stroke-width="2.5" stroke-dasharray="10 6"/>
+    <text x="650" y="335" font-size="15" fill="#f87171" font-weight="600">Sell Stop</text>
+    <line x1="60" y1="290" x2="640" y2="290" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <text x="650" y="295" font-size="13" fill="#fb923c">Sell SL (initial)</text>
+    <!-- distance markers -->
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+      <path d="M90 130V230M84 136L90 130L96 136M84 224L90 230L96 224"/>
+      <path d="M90 230V330M84 236L90 230L96 236M84 324L90 330L96 324"/>
+    </g>
+    <text x="102" y="185" font-size="13" fill="#94a3b8">Distance</text>
+    <text x="102" y="285" font-size="13" fill="#94a3b8">Distance</text>
+    <!-- price path -->
+    <polyline points="140,232 220,215 290,240 360,200 430,170 500,125 560,100" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="500" cy="130" r="8" fill="#34d399" stroke="#0b1220" stroke-width="3"/>
+    <text x="250" y="118" font-size="14" fill="#34d399" font-weight="600">Fill: Buy Stop triggers</text>
+    <g>
+      <line x1="500" y1="140" x2="500" y2="320" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <rect x="380" y="338" width="240" height="30" rx="6" fill="#a78bfa" fill-opacity="0.2" stroke="#a78bfa"/>
+      <text x="500" y="358" font-size="14" fill="#c4b5fd" text-anchor="middle" font-weight="600">OCO: Sell Stop deleted</text>
+    </g>
+    <text x="30" y="420" font-size="13" fill="#6b7f95">Fade mode (ENTRY_LIMIT) mirrors this: Buy Limit below price, Sell Limit above price.</text>
+    <text x="30" y="440" font-size="13" fill="#6b7f95">Illustration only. Distances are not to scale.</text>
+  </g>
+</svg>
