@@ -8,19 +8,12 @@
   
 </p>
 
-# MT5 Forex Robots
-
-A collection of **Expert Advisors (EAs) for MetaTrader 5**, written in MQL5. Each robot lives in its own folder with source code, documentation, parameter reference and illustrations.
-
-> **Risk warning:** Forex and CFD trading carries a high risk of loss. These robots are provided for educational and research purposes. Nothing here is financial advice and no profit is guaranteed. **Always test on a demo account first.** See [DISCLAIMER.md](DISCLAIMER.md).
 
 ## Robots
 
 | # | Robot | Strategy | Type | Platform | Docs |
 |---|-------|----------|------|----------|------|
 | 1 | **OCO Straddle Trail EA** | Breakout (or fade) straddle with OCO pending orders and an aggressive trailing stop | Short-term, pending orders | MT5 | [Read more](bots/01-oco-straddle-trail-ea/README.md) |
-| 2 | _Coming soon_ | | | | |
-| 3 | _Coming soon_ | | | | |
 
 ## Quick start
 
