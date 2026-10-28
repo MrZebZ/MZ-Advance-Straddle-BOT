@@ -5,9 +5,7 @@
 <p align="center">
   <img alt="Platform" src="https://img.shields.io/badge/platform-MetaTrader%205-1f6feb">
   <img alt="Language" src="https://img.shields.io/badge/language-MQL5-2ea44f">
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
-  <img alt="Status" src="https://img.shields.io/badge/status-demo%20testing%20recommended-orange">
-  <img alt="PRs" src="https://img.shields.io/badge/PRs-welcome-brightgreen">
+  
 </p>
 
 # MT5 Forex Robots
@@ -63,9 +61,6 @@ Full walkthrough with troubleshooting: [docs/INSTALLATION.md](docs/INSTALLATION.
 - [Contributing](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
 
-## Contributing
-
-Bug reports, ideas and pull requests are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## License
 
